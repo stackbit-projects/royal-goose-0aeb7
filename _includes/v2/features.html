@@ -1,0 +1,20 @@
+<div class="Features">
+  <div class="Features__inner">
+    <div class="Features__header">
+      <div class="Features__title">Características</div>
+      <div class="Features__description">del módulo de {{ include.title }}</div>
+    </div>
+    <div class="Features__content">
+      <div class="Features__keys">
+        {% for feature in include.features -%}
+        <div class="Feature__key">
+          <div class="Features__keyIcon"></div>
+          <div class="Features__keyDescription">
+            {{ feature }}
+          </div>
+        </div>
+        {% endfor -%}
+      </div>
+    </div>
+  </div>
+</div>

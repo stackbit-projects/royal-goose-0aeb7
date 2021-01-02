@@ -1,0 +1,106 @@
+.Contact {
+  padding: 120px 0;
+}
+.Contact__inner {
+  display: flex;
+  justify-content: space-between;
+  width: $innerSize;
+  margin: auto;
+}
+.Contact__content {
+  width: 464px;
+}
+.Contact__form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Contact__title {
+  @include sans-serif(42px, 700, $cWhite);
+  line-height: 120%;
+}
+.Contact__description {
+  @include sans-serif(24px, 400, $cWhite);
+  line-height: 120%;
+}
+.Contact__input {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  transition: opacity $transitionRegular ease-in-out;
+}
+
+.Contact__success.is-hidden,
+.Contact__error.is-hidden,
+.Contact__input.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Contact__error {
+  padding: 18px;
+  border: 1px solid $cRed;
+  @include sans-serif(24px, 700, $cRed);
+}
+
+.Contact__success {
+  border: 1px solid $cGreen;
+  padding: 18px;
+  @include sans-serif(24px, 700, $cGreen);
+}
+
+.Contact__success,
+.Contact__error {
+  position: absolute;
+  width: 100%;
+  transition: opacity $transitionRegular ease-in-out;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.Contact__input:hover .Contact__input,
+.Contact__input:hover .Contact__CTA {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.Contact__inputField {
+  flex: 1;
+  width: auto;
+}
+.Contact__CTA {
+  border-radius: 0;
+  font-size: 20px;
+  padding: 24px;
+}
+
+@media (max-width: $cMediaMobile) {
+  .Contact__input {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $cMediaCompact) {
+  .Contact__content {
+    margin: 0 0 32px;
+    width: auto;
+  }
+  .Contact__inner {
+    width: 90%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $cMediaStretched) {
+  .Contact__inner {
+    width: 90%;
+  }
+  .Contact__inputField.Input__field {
+    width: auto;
+  }
+}
+
+@media (max-width: $cMediaMobile) and (orientation: portrait) {
+  .Contact {
+    padding: 60px 0;
+  }
+}

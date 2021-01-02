@@ -1,0 +1,128 @@
+.Functionalities {
+  padding: 120px 0;
+}
+.Functionalities__features {
+  background: $cBlue;
+  // display: grid;
+  // grid-template-columns: auto auto;
+  // grid-gap: 50px 50px;
+}
+.Functionality {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: calc(100% - 50px);
+  margin: 0 0 100px 0;
+}
+.FunctionalityList__item {
+  position: relative;
+  padding: 18px 0 18px 0;
+  display: flex;
+  align-items: top;
+}
+.Functionality__explanation {
+  // display: none;
+}
+.Functionalities__inner {
+  width: $innerSize;
+  margin: auto;
+}
+.Functionalities__header {
+  margin: 0 0 60px;
+  width: $innerSize;
+  margin: 0 auto 60px;
+}
+.Functionalities__title {
+  @include sans-serif(42px, 700, $cWhite);
+  line-height: 120%;
+}
+.Functionalities__description {
+  @include sans-serif(36px, 700, $cYellow);
+  line-height: 120%;
+}
+.Functionalities__content {
+  text-align: left;
+}
+.Functionalities__explanation {
+  width: 100%;
+  position: relative;
+  background: rgba(255,255,255,0.20);
+  padding: 32px;
+  box-sizing: border-box;
+}
+.Functionalities__explanation p {
+  margin: 0 0 16px;
+}
+
+.FunctionalityList__itemContent {
+  margin: 0 0 0 10px;
+}
+.FunctionalityList__item:last-child {
+  margin: 0;
+}
+.FunctionalityList__itemTitle {
+  text-transform: uppercase;
+  @include sans-serif(24px, 700, $cWhite);
+}
+.FunctionalityList__itemDescription {
+  opacity: 0.6;
+  line-height: 120%;
+
+  @include sans-serif(16px, 400, $cWhite);
+}
+
+
+@media (max-width: $cMediaStretched) {
+  .Functionalities__inner {
+    width: 90%;
+  }
+  .Functionalities__header {
+    width: 100%;
+  }
+}
+
+@media (max-width: $cMediaTablet) {
+  .Functionalities__content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $cMediaMobile) {
+  .Functionality {
+    display: block;
+    width: initial;
+    margin: 0 0 50px 0;
+  }
+  .FunctionalityList__item {
+    padding: 18px 0;
+  }
+  .FunctionalityList__itemContent {
+    flex: 1;
+  }
+  .Functionalities__explanation {
+
+  }
+  .Functionality__explanation {
+    display: block;
+  }
+  .Functionality__explanation a {
+    color: $cGreen;
+  }
+  .FunctionalityList__itemShadow {
+    display: none;
+  }
+  .FunctionalityList__item:hover {
+    background: none;
+  }
+}
+
+@media (max-width: $cMediaMobile) and (orientation: portrait) {
+  .Functionalities {
+    padding: 60px 0;
+  }
+  .Functionalities__title {
+    font-size: 36px;
+  }
+  .Functionalities__description {
+    font-size: 32px;
+  }
+}

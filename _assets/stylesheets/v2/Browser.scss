@@ -1,0 +1,140 @@
+.Browser {
+  position: relative;
+  background: $cWhite;
+  border-radius: 6px;
+  width: 634px;
+  height: 390px;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+  transition: box-shadow $transitionSlow ease-in-out, all $transitionSlow ease-in-out;
+  overflow:hidden;
+}
+
+.Browser__screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px 6px 0 0;
+  z-index: 1;
+  background: url(asset_path('mockup')) 0 0 no-repeat;
+  background-size: cover;
+  width: 637px;
+  vertical-align: middle;
+}
+
+.Browser.Browser--altos-cargos-y-agendas .Browser__screen {
+  background: url(asset_path('modules/agenda')) 0 0 no-repeat!Important;
+  background-size: 634px !important;
+  top: 32px;
+}
+.Browser.Browser--medium.Browser--altos-cargos-y-agendas .Browser__screen {
+  background-size: 800px!important;
+}
+
+
+.Browser.Browser--presupuestos .Browser__screen {
+  background: url(asset_path('modules/presupuestos')) 0 0 no-repeat!Important;
+  background-size: 634px !important;
+  top: 32px;
+}
+.Browser.Browser--medium.Browser--presupuestos .Browser__screen {
+  background-size: 800px!important;
+}
+
+
+.Browser.Browser--observatorio-estadistico .Browser__screen {
+  background: url(asset_path('modules/indicadores')) 0 0 no-repeat!Important;
+  background-size: 634px !important;
+  top: 32px;
+}
+.Browser.Browser--medium.Browser--observatorio-estadistico .Browser__screen {
+  background-size: 800px!important;
+}
+
+
+.Browser.Browser--participacion .Browser__screen {
+  background: url(asset_path('modules/participacion.jpg')) 0 0 no-repeat !important;
+  background-size: 634px !important;
+  top: 32px;
+}
+.Browser.Browser--medium.Browser--participacion .Browser__screen {
+  background-size: 800px!important;
+}
+
+.Browser.Browser--planificacion .Browser__screen {
+  background: url(asset_path('modules/planificacion.jpg')) 0 0 no-repeat !important;
+  background-size: 634px !important;
+  top: 32px;
+}
+.Browser.Browser--medium.Browser--planificacion .Browser__screen {
+  background-size: 800px!important;
+}
+
+.Browser.Browser--large .Browser__screen {
+  top: 44px;
+  background: url(asset_path('mockup.svg')) 0 0 no-repeat;
+  width: 1024px;
+}
+.Browser.Browser--medium .Browser__screen {
+  top: 44px;
+  background: url(asset_path('mockup.svg')) 0 0 no-repeat;
+  width: 800px;
+}
+
+.Browser.Browser--large {
+  width: 1024px;
+  height: 800px;
+}
+.Browser.Browser--medium {
+  width: 800px;
+  height: 540px;
+}
+.Cover__browser.Browser--medium {
+  width: 75vw;
+  height: 540px;
+}
+.Browser.Browser--small {
+  width: 65vw;
+  height: 540px;
+}
+
+.Browser__header {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  background: #f0f0f0;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  padding: 0 12px;
+  box-sizing: border-box;
+  align-items: center;
+  z-index: 10;
+}
+
+.Browser.Browser--large .Browser__header,
+.Browser.Browser--medium .Browser__header {
+  height: 45px;
+}
+
+.Browser__button {
+  width: 9px;
+  height: 9px;
+  background: #D8D8D8;
+  border-radius: 100%;
+  margin: 0 6px 0 0;
+  transition: background $transitionSlow ease-in-out;
+  cursor: pointer;
+}
+
+.Browser.Browser--large .Browser__button,
+.Browser.Browser--medium .Browser__button {
+  width: 12px;
+  height: 12px;
+}
+
+.Browser__button:hover {
+  background: #CCC;
+}

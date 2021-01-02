@@ -1,0 +1,17 @@
+<div class="Slideshow">
+  <div class="Slideshow__inner">
+    <div class="Slideshow__content">
+      <div class="Slideshow__header">
+        <div class="Slideshow__title">Blog de Gobierto</div>
+        <div class="Slideshow__description">Últimos artículos en <a href="/blog" class="Slideshow__link">nuestro blog</a></div>
+      </div>
+    </div>
+    <div class="Slideshow__items">
+      {% for post in site.posts limit:1 %}
+      <a href="{{ post.url | prepend: site.baseurl }}" class="Slideshow__thumbnail" style="background-image: url('{% asset '{{ post.main_photo }}' @path %}')"></a>
+      <a class="Slideshow__itemTitle" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <div class="Slideshow__itemDescription">{{ post.subtitle }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

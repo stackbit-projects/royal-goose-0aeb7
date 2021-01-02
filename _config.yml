@@ -1,0 +1,97 @@
+# Site settings
+title: "Gobierto · Plataforma de Gobierto Abierto open source"
+description: Gobierto ofrece metodología y herramientas open source para desplegar iniciativas de gobierno abierto. Transparencia, Participación, Rendición de Cuentas y Comunicación Ciudadana.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://gobierto.es
+
+# default permalink for blog posts
+permalink: /blog/:year:month:day-:title.html
+
+collections:
+  static_pages:
+    output: true
+    permalink: /pages/:path/
+  newsletters:
+    output: true
+    permalink: /newsletters/:title.html
+  widgets:
+    output: true
+    permalink: /widgets/:title/
+  charts:
+    output: true
+    permalink: /charts/:path/
+  category:
+    output: true
+    permalink: /temas/:title/
+
+
+# urls for sections/pages
+url_producto_presupuestos_visualizacion: "visualizacion_presupuestos_municipales"
+url_producto_presupuestos_consultas: "presupuestos_participativos_consultas"
+url_producto_presupuestos_historias:
+url_producto_presupuestos_inteligencia:
+
+# The configuration entry `url` is generated in plugins/site_url_generator.rb depending on the environment variable
+production_url: "http://gobierto.es"
+staging_url: ""
+development_url: "http://localhost:4000"
+
+twitter_username: "@gobierto"
+twitter_hashtag_for_social_share: '#gobierto'
+
+# Build settings
+markdown: kramdown
+# markdown: CommonMark
+# commonmark:
+#   options: ["SMART", "FOOTNOTES"]
+#   extensions: ["strikethrough", "autolink", "table"]
+
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'Rakefile', '_config.yml', 'bin', '.git', '.asset-cache', node_modules, '.jekyll-cache', '_assets/images/v1', '_assets/stylesheets/v1', '_assets/stylesheets/v2']
+
+plugins:
+  - jekyll-assets
+  - jekyll-include-cache
+
+# jekyll-press:
+#   exclude: '*.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+#   js_options: {}      # js minifier options
+#   css_options: {}     # css minifier options
+#   html_options: {}    # html minifier options
+
+# Plugin: jekyll-assets
+assets:
+  source_maps: true
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/javascript
+    - _assets/images
+    - _assets/stylesheets
+  # gzip: [ text/css, application/javascript ]
+  digest: false
+  defaults:
+    js: { integrity: false } # true on JEKYLL_ENV=production
+    css: { integrity: false } # true on JEKYLL_ENV=production
+
+timezone: Europe/Madrid
+
+
+#### CONTENT ####
+
+we_help_you_to: 
+  - Imaginar
+  - Investigar
+  - Definir
+  - Construir
+  - Comunicar
+  - Analizar
+
+home_questions: 
+  - ¿Cómo se está usando nuestro producto? 
+  - ¿Qué datos gestiono que podrían aportar valor si se hacen accesibles? 
+  - ¿Qué forma debería tener el producto que hemos imaginado? 
+  - ¿Cómo usamos APIs para reutilizar esfuerzos? 
+  - ¿Cómo puedo ayudar a que los trabajadores públicos hagan un uso más eficiente de su tiempo?
+  - ¿Cómo afecta el origen de los usuarios y sus formas de acceder?
+  - ¿Cómo planteamos una estrategia de involucración progresiva?
+  - ¿Qué tipo de servicio digital debería construir?

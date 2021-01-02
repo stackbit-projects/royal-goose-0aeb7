@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+// @import "//maxcdn.bootstrapcdn.com/font-awesome/5.7.2/css/font-awesome.min.css";
+
+@mixin sans-serif($size: auto, $weight: 400, $color: none) {
+  font-family: 'Source Sans Pro', serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

@@ -1,0 +1,30 @@
+<div class="Functionalities">
+  <div class="Functionalities__inner">
+    <div class="Functionalities__header">
+      <div class="Functionalities__title">Funcionalidades</div>
+      <div class="Functionalities__description">del módulo de {{ include.title }}</div>
+    </div>
+    <div class="Functionalities__content">
+
+      <!-- <div class="Functionalities__explanation js-explanation">
+        <div class="Functionalities__explanationContent">{{ include.functionalities[0].explanation }}</div>
+      </div> -->
+
+      <div class="Functionalities__features">
+        {% for f in include.functionalities %}
+        <div class="Functionality">
+          <div class="FunctionalityList__item">
+            <span class="Icon__tick"></span>
+            <div class="FunctionalityList__itemContent">
+              <div class="FunctionalityList__itemTitle">{{ f.title }}</div>
+              <div class="FunctionalityList__itemDescription">{{ f.description }}</div>
+            </div>
+          </div>
+          <div class="Functionalities__explanation">{{ f.explanation }}</div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>

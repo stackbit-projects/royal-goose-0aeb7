@@ -1,0 +1,39 @@
+
+
+.Logo {
+  display: block;
+  background: url(asset_path('logo-gobierto.svg')) 0 0 no-repeat;
+  background-size: contain;
+  width: 194px;
+  height: 34px;
+  margin-top: -4px;
+
+  @media all and (max-width : $cMediaMobile) {
+    margin-top: 0;
+  }
+}
+.Logo__populate {
+  display: block;
+  background: url(asset_path('populate.svg')) 0 0 no-repeat;
+  background-size: cover;
+  width: 140px;
+  height: 42px;
+}
+.Logo__sergio-jimenez {
+  display: block;
+  background: url(asset_path('logo-sergio-jimenez-lite.png')) 0 0 no-repeat;
+  background-size: cover;
+  width: 140px;
+  height: 42px;
+}
+.Logo__description {
+  margin: 0 0 4px;
+  @include sans-serif(12px, 400, rgba(#333, 0.67));
+}
+
+@media (max-width: $cMediaMobile) {
+  .Logo__populate {
+    margin: 0 auto;
+  }
+
+}

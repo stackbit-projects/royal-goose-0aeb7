@@ -1,0 +1,78 @@
+.Clients {
+  background: $cWhite;
+  margin-bottom: 2em;
+  border-bottom: 1px solid $cSubtleGray;
+}
+.Clients__inner {
+  display: flex;
+  justify-content: space-between;
+  width: $innerSize;
+  margin: auto;
+}
+.Clients__content {
+  text-align: center;
+  margin: auto;
+  padding: 48px 0;
+  width: 100%;
+}
+.Clients__title {
+  line-height: 120%;
+  margin: 0 25% 48px;
+  @include sans-serif(24px, 700, $cBlue);
+
+  @media all and (max-width : $cMediaMobile) {
+    margin: 0 0 48px;
+    @include sans-serif(18px, 700, $cBlue);
+  }
+
+}
+.Client__logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.Client__logo {
+  display: block;
+  opacity: 0.3;
+  transition: opacity $transitionSlow ease-in-out;
+}
+.Client__logo:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: $cMediaTablet) {
+  .Clients__content {
+    margin: 0 0 32px;
+    width: auto;
+  }
+  .Clients__inner {
+    width: 90%;
+  }
+
+  .Client__logos {
+    width: 75%;
+    flex-wrap: wrap;
+  }
+  .Client__logo {
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: $cMediaMobile) {
+  .Client__logo {
+    margin: 16px auto;
+  }
+}
+
+@media (max-width: $cMediaStretched) {
+  .Clients__inner {
+    width: 100%;
+  }
+}
+
+@media (max-width: $cMediaMobile) and (orientation: portrait) {
+  .Clients {
+    padding: 23px;
+  }
+}

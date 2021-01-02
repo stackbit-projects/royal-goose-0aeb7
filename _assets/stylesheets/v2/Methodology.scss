@@ -1,0 +1,113 @@
+.Methodology {
+  position: relative;
+  padding: 100px 0;
+  background: $cGreen;
+  overflow: hidden;
+}
+
+.Methodology__shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: url(asset_path('methodology-shadow')) no-repeat 50% 50%;
+  $w: 1400px;
+  width:  $w;
+  height: $w;
+  margin-left: -$w/2;
+  margin-top: -$w/2;
+  opacity: .08;
+  background-size: $w $w;
+}
+.Methodology__inner {
+  position: relative;
+  width: $innerSize;
+  margin: auto;
+}
+.Methodology__content {
+  width: 660px;
+}
+.Methodology__title {
+  @include sans-serif(42px, 700, $cWhite);
+  margin: 0 0 4px;
+  line-height: 120%;
+}
+.Methodology__description {
+  @include sans-serif(18px, 400, $cWhite);
+  line-height: 120%;
+}
+.Methodology__logo {
+}
+
+.st1 {
+  animation: pulse-me 3s ease-in-out infinite;
+}
+
+.st0 {
+  fill:none;
+  stroke:$cWhite;
+  stroke-miterlimit:10;
+}
+.st1 {
+  fill:$cWhite;
+  stroke:$cWhite;
+  stroke-miterlimit:10;
+}
+.st2 {
+  opacity:0.5;
+  fill:none;
+  stroke: $cWhite;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:10;
+  stroke-dasharray:2;
+}
+.st3 {
+  fill:$cYellow;
+}
+.st4 {
+  @include sans-serif(42px, 700, $cWhite);
+}
+.st5 {
+  font-size:10px;
+}
+.st6 {
+  fill: $cWhite;
+}
+.st7 {
+  @include sans-serif(42px, 400, $cWhite);
+}
+.st8 {
+  font-size: 9px;
+}
+
+@keyframes pulse-me{
+  0%{
+    r: 0;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  70%{
+    opacity: 0.09;
+  }
+  100%{
+    r: 9;
+    opacity: 0;
+  }
+}
+
+@media (max-width: $cMediaStretched) {
+  .Methodology__content {
+    width: auto;
+  }
+  .Methodology__inner {
+    width: 90%;
+  }
+}
+
+@media (max-width: $cMediaMobile) and (orientation: portrait) {
+  .Methodology {
+    padding: 50px 0;
+  }
+}

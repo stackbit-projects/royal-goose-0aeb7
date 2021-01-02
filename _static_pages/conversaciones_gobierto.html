@@ -1,0 +1,109 @@
+---
+title: Conversaciones Gobierto
+subtitle: Una serie de conversaciones con personajes relevantes del mundo de los datos, la gestión pública, el gobierno abierto...
+permalink: "/conversaciones/"
+layout: default
+main_photo: conv_gobierto/2006-CG-tonimerino-small.png
+---
+
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+<div class="bg-white py-16">
+
+  <div class="container max-w-screen-xl mx-auto text-gray-800 px-8 xl:px-0">
+
+    <div class="md:flex">
+      <div class="md:w-1/3">
+        
+        <h1 class="text-2xl font-black mb-4 text-gray-700">#ConversacionesGobierto</h1>
+
+        <p class="text-2xl mb-8 leading-snug text-gray-500">Una serie de conversaciones con personajes relevantes del mundo de los datos, la gestión pública, el gobierno abierto...</p>
+    
+        <div class="text-l leading-relaxed text-gray-700">
+          
+          <div class="lg:flex">
+
+            <div class="lg:w-1/2">
+              <div>📊 datos</div>
+              <div>🔎 transparencia</div>
+              <div>🌡indicadores</div>
+              <div>✏️ diseño de servicios</div>
+              <div>🙌 participación</div>
+            </div>
+            
+            <div class="lg:w-1/2">
+              <div>⚖️ ética</div>
+              <div>🔑 #civictech</div>
+              <div>🌈 ODS</div>
+              <div>💎 innovación pública</div>
+            </div>
+
+          </div>
+        
+        </div>
+
+        <div class="ml-form-embed my-16 sticky top-0"
+          data-account="973324:w1x9v5r3g2"
+          data-form="1991460:c6f7p9">
+        </div> 
+
+
+      </div>
+
+      <div class="md:w-2/3 md:pl-16 xl:pl-32">
+
+        <div class="uppercase text-sm text-gray-500 font-bold">Próximas conversaciones</div>
+
+        <div class="video_wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hnGmDi_Bbdw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- <div class="my-32 border border-gray-300 p-8" style="background-image: url('{% asset 'conv_gobierto/Background.png' @path %}'); background-size: cover; " >
+          <div class="flex">
+            <div class="md:w-1/2 font-bold">#ConversacionesGobierto</div>
+            <div class="md:w-1/2 text-right">
+              <div class="font-bold">Martes 12 de mayo</div>
+              <div>19pm</div>
+            </div>
+          </div>
+          <div class="mt-20 mb-12 text-lg">Presupuestos alineado con ODS, planificación, Innovación en las PYMEL, cambio organizativo y gestión del talento público</div>
+          <div class="mt-8 color-brand-blue-dark">
+            <div class="text-3xl font-bold">Virginia Losa</div>
+            <div class="text-3xl font-bold opacity-50">Diputación de Palencia</div>
+          </div>
+          <div class="mt-24">
+            <div class="flex">
+              <div class="w-1/2">
+                <div class="text-xs opacity-50">Colabora</div>
+                <div class="">LOGO</div>
+              </div>
+              <div class="w-1/2 text-right">
+                {% asset 'LogoGobierto@2x.png' style="width: 150px; float: right" %}
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+
+        <div class="mt-16 uppercase text-sm text-gray-500 font-bold">Conversaciones recientes</div>
+
+        {% for post in site.posts %}
+          {% if post.conversaciones_gobierto %}
+          <div class="mb-16">
+            {% include post.html %}
+          </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="ml-form-embed"
+          data-account="973324:w1x9v5r3g2"
+          data-form="1991460:c6f7p9">
+        </div> 
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

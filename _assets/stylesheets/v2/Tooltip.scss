@@ -1,0 +1,68 @@
+.Tooltip {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  min-width: 180px;
+  background: $cGreen;
+  border-radius: 4px;
+  transition: all .3s;
+  z-index: 30;
+  transition: all 2s ease;
+  padding: 16px 20px;
+  transition: opacity $transitionRegular ease-in-out;
+  opacity: 1;
+}
+
+.Tooltip__target {
+  margin: 0 0 0 3px;
+  display: inline-block;
+  background: url(asset_path('tooltip-target')) 0 0 no-repeat;
+  width: 10px;
+  height: 6px;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.Tooltip--hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.Tooltip::after {
+  position: absolute;
+  margin-left: -6px;
+  top: -12px;
+  border: 6px solid transparent;
+  border-bottom: 6px solid $cGreen;
+  content: '';
+  width: 0;
+  height: 0;
+  left: 50%;
+}
+
+.Tooltip__item:first-child {
+  padding-top: 0;
+}
+
+.Tooltip__item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.Tooltip__item {
+  padding: 6px 0;
+}
+
+.Tooltip__link {
+  display: block;
+  text-decoration: none;
+  @include sans-serif(16px, 400, #fff);
+  transition: color $transitionRegular linear;
+}
+
+.Tooltip__link:hover {
+  color: $cBlue;
+}
+.Tooltip__link.is-active {
+  font-weight: 700;
+}

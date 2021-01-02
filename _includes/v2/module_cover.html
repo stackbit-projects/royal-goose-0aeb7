@@ -1,0 +1,44 @@
+
+
+
+<div class="ModuleCover">
+  <div class="ModuleCover__inner">
+    <div class="ModuleCover__top">
+
+      {% if include.youtube_video_id %}
+      <div class="ModuleCover__Video">
+        <div class="video_wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.youtube_video_id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      {% else %}
+      <div class="ModuleCover__browser Browser Browser--{{ include.module.url }}">
+        <div class="Browser__header">
+          <div class="Browser__button"></div>
+          <div class="Browser__button"></div>
+          <div class="Browser__button"></div>
+        </div>
+        <div class="Browser__screen"></div>
+      </div>
+      <div class="Module__shadow"></div>
+      {% endif %}
+
+      <div class="ModuleCover__header">
+        <h1 class="ModuleCover__title">{{ include.module.title }}</h1>
+        <h2 class="ModuleCover__description">{{ include.module.description }}</h2>
+      </div>
+    </div>
+
+    <div class="ModuleCover__keys">
+      <div class="ModuleCover__key">
+        {{ include.module.key0 }}
+      </div>
+      <div class="ModuleCover__key">
+        {{ include.module.key1 }}
+      </div>
+      <div class="ModuleCover__key">
+        {{ include.module.key2 }}
+      </div>
+    </div>
+  </div>
+</div>
